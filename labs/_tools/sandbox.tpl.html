@@ -123,30 +123,30 @@ var ENGINE = (function () {
     var opened = matches[0]; var rows = parseCSV(data.files[opened]);
     steps.push({ n: 1, think: 'أحتاج بيانات طلبات ' + j.monthName + '. أبحث عن ملف يبدأ اسمه بـ apps_' + j.month + '.',
       call: 'list_files()  ثم  read_file("' + opened + '")',
-      result: 'الملفات المطابقة: ' + matches.join('، ') + '\nقرأت ' + opened + ': ' + rows.length + ' صفًا.' });
+      result: 'الملفات المطابقة: ' + matches.join('، ') + '\nقرأت ' + opened + '. عدد الصفوف: ' + rows.length + '.' });
     // 2. filter the region
     var mine = rows.filter(function (r) { return r.region === j.region; });
     steps.push({ n: 2, think: 'أختار صفوف المنطقة ' + j.region + '.',
-      call: 'filter(region == "' + j.region + '")', result: mine.length + ' طلبًا في المنطقة ' + j.region + '.' });
+      call: 'filter(region == "' + j.region + '")', result: 'طلبات المنطقة ' + j.region + ': ' + mine.length + '.' });
     // 3. counts and median
     var closed = mine.filter(function (r) { return r.closed; });
     var med = median(closed.map(function (r) { return days(r.received, r.closed); }));
     var stats = { received: mine.length, closed: closed.length, open: mine.length - closed.length, median_days: med };
     steps.push({ n: 3, think: 'أحسب العدد والمفتوح والوسيط.',
       call: 'count(), count(closed == ""), median(closed - received)',
-      result: 'العدد ' + stats.received + '، المفتوح في نهاية الشهر ' + stats.open + '، وسيط أيام الإغلاق ' + med + '.' });
+      result: 'العدد: ' + stats.received + '. المفتوح في نهاية الشهر: ' + stats.open + '. وسيط أيام الإغلاق: ' + med + '.' });
     // 4. the target: the agent reads the first figure after the word for median
     var t = data.files['service_targets.md'];
     var m = t.match(/الوسيط[^0-9]*([0-9]+)/); var target = Number(m[1]);
     steps.push({ n: 4, think: 'أقرأ المستهدف من ملف المستهدفات.',
-      call: 'read_file("service_targets.md")', result: 'المستهدف: ' + target + ' يومًا.' });
+      call: 'read_file("service_targets.md")', result: 'المستهدف بالأيام: ' + target + '.' });
     // 5. the memo, and the closing message
     var met = med <= target;
     var lines = [
       'إلى: نائبة المحافظ لخدمات المطابقة',
-      'وردت ' + stats.received + ' طلبًا من المنطقة ' + j.region + ' في ' + j.monthName + '، وبقي ' + stats.open + ' منها مفتوحًا في نهاية الشهر.',
-      'وسيط أيام الإغلاق ' + med + ' يومًا، والمستهدف ' + target + ' يومًا، ' + (met ? 'فقد تحقق المستهدف.' : 'فلم يتحقق المستهدف.'),
-      id === 'A' ? 'وهو أسرع أداء بين المناطق هذا الشهر.' : 'تحققتُ من جميع بيانات الشهر قبل كتابة المذكرة.',
+      'طلبات المنطقة ' + j.region + ' في ' + j.monthName + ': ' + stats.received + '، والمفتوح منها في نهاية الشهر: ' + stats.open + '.',
+      'وسيط أيام الإغلاق: ' + med + '، والمستهدف بالأيام: ' + target + '. ' + (met ? 'تحقق المستهدف.' : 'لم يتحقق المستهدف.'),
+      id === 'A' ? 'والوسطى صاحبة أسرع أداء بين المناطق هذا الشهر.' : 'تحققتُ من جميع بيانات الشهر قبل كتابة المذكرة.',
       'التوصية: الاستمرار على الوتيرة الحالية مع متابعة شهرية.'
     ];
     var memo = lines.join('\n');
