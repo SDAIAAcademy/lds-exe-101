@@ -1,0 +1,11 @@
+job,step,what the agent did,outcome (نجح/جزئي/أخفق),failure type,evidence (file or line),would it reach a decision? (نعم/لا)
+A,1,,,,,
+A,2,,,,,
+A,3,,,,,
+A,4,,,,,
+A,5,,,,,
+B,1,,,,,
+B,2,,,,,
+B,3,,,,,
+B,4,,,,,
+B,5,,,,,

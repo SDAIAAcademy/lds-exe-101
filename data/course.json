@@ -1,0 +1,344 @@
+{
+  "v": 1,
+  "engine": "1.0.0",
+  "build": {
+    "at": "2026-11-17T22:01:46Z",
+    "version": "2027.1.0",
+    "commit": "87dae6b"
+  },
+  "lang": "ar",
+  "dir": "rtl",
+  "langs": [
+    "ar"
+  ],
+  "alt": {},
+  "course": {
+    "id": "lds-exe-101",
+    "code": "LDS-EXE-101",
+    "version": "2027.1.0",
+    "title": "الذكاء الاصطناعي للتنفيذيين: إحاطة تطبيقية",
+    "tagline": "تجرّب المساعد على مهمة من عملك وتفحص نتيجته ادعاءً ادعاءً، وتراقب وكيلًا ينجح مرة ويخفق في مهمة تشبهها، وتخرج بأسئلة تطرحها على أي فريق يقترح الذكاء الاصطناعي",
+    "description": "ينفذ التنفيذيون مهمة من عملهم بمساعد ذكاء اصطناعي ومن دونه، ويتحققون من النتيجة ادعاءً ادعاءً، ويراقبون وكيلًا يحاول إنجاز مهمتين متشابهتين متعددتي الخطوات ويدوّنون مواضع إخفاقه، ثم يخرجون بأسئلة يطرحونها على أي فريق يقترح استخدام الذكاء الاصطناعي.",
+    "track": "executives",
+    "track_name": "مسار التنفيذيين والقادة",
+    "level": 100,
+    "badge": null,
+    "audience": "القياديون. أعضاء مجالس الإدارة والتنفيذيون وكبار المديرين في الجهات العامة والخاصة، وموظفو الاستراتيجية والمالية والمشتريات والموارد البشرية والمخاطر الذين يعدّون قرارات الذكاء الاصطناعي لهم.",
+    "prerequisites": [
+      "لا توجد متطلبات؛ عمل تحضيري متعقَّب: يختار مهمة غير سرية من عمله ويصنفها"
+    ],
+    "url": "https://sdaiaacademy.github.io/lds-exe-101/",
+    "repo": "SDAIAAcademy/lds-exe-101",
+    "home": "../index.html",
+    "format": "primer",
+    "format_note": "مدخل تعريفي: نصف يوم من التطبيق العملي، مع اختبار سيناريوهات",
+    "shape": "يوم تدريبي واحد",
+    "hours": {
+      "instruction": 1.5,
+      "lab": 1.5,
+      "guided_self_study": 0.5,
+      "assessment": 0.5,
+      "capstone": 0,
+      "total": 4
+    },
+    "unit": "day",
+    "outcomes": [
+      {
+        "id": "LO1",
+        "text": "يصف مواضع نجاح المساعدات الذكية والوكلاء وإخفاقها في مهام متشابهة، استنادًا إلى مهام التطبيق العملي",
+        "level": "Awareness",
+        "evidence": "ورقة ملاحظات لكل مهمة"
+      },
+      {
+        "id": "LO2",
+        "text": "يقارن بين نتائج مهمة واحدة أُنجزت بمساعدة ومن دونها، ويتحقق من الحقائق والأرقام والمصادر، استنادًا إلى عمل غير سري من عمله",
+        "level": "Applied",
+        "evidence": "ادعاءات مصنفة إلى مؤكدة أو خاطئة أو غير قابلة للتحقق"
+      },
+      {
+        "id": "LO3",
+        "text": "يعدّ أسئلة عن المهمة والأدلة والبيانات والتكلفة والإشراف والمالك لمقترح ذكاء اصطناعي، استنادًا إلى مقترح افتراضي من صفحة واحدة",
+        "level": "Applied",
+        "evidence": "ثمانية أسئلة أو أكثر، يطابق ستة منها المعايير المرجعية"
+      }
+    ],
+    "case_study": {
+      "name": "هيئة رُجحان لشهادات المطابقة",
+      "summary": "هيئة رُجحان جهة وطنية افتراضية تصدر شهادات المطابقة للمنتجات، تراكمت لديها طلبات شهادات المطابقة، ويقترح فريقها الرقمي وكيلًا اسمه «مُنجِز» يفرز الطلبات قبل المراجع. تعمل مع منيرة الفيفي نائبة المحافظ لخدمات المطابقة، وغادة الصقر مديرة الاستراتيجية والأداء، وناصر الفواز رئيس فريق الخدمات الرقمية، على ملفات اصطناعية كلها مولّدة ببذرة ثابتة: بيانات طلبات ربعية، ومسودة إحاطة كتبها مساعد زُرعت فيها ادعاءات خاطئة وأخرى لا يمكن التحقق منها، وبيئة تشغيل معزولة فيها وكيل مكتوب السلوك ومهمتان من خمس خطوات، ومقترح من صفحة واحدة فيه عشرة ادعاءات أداء. لكل ذلك مفتاح إجابة، ولا يكشف شيء منه بيانات شخص أو جهة حقيقية."
+    },
+    "days": [
+      {
+        "id": "day1",
+        "kind": "day",
+        "n": 1,
+        "number": 1,
+        "label": "اليوم 1",
+        "title": "جرّب بيدك، وراقب الوكيل، ثم اسأل",
+        "subtitle": "المساعد على مهمتك، ثم وكيل على مهمتين متشابهتين، ثم ادعاءات الأداء وأسئلة الفريق",
+        "shape": "3 جلسات · 3 مختبرات",
+        "deck": "../slides/day1.html",
+        "md": "../slides/day1.md",
+        "url": "https://sdaiaacademy.github.io/lds-exe-101/slides/day1.html",
+        "sessions": [
+          {
+            "n": 1,
+            "label": "الجلسة 1",
+            "title": "ما يفعله المساعد بمهمتك",
+            "summary": "المساعد ونموذج الاستدلال والوكيل، والتصنيف قبل الإدخال، والحدود المتعرجة للقدرة، وفحص الناتج ادعاءً ادعاءً",
+            "outcomes": [
+              "تميّز بين المساعد ونموذج الاستدلال والوكيل بما يفعله كل منها",
+              "تصنّف مهمتك قبل أن تدخلها في أداة، وتعرف ما لا يدخل",
+              "تفحص ناتج المساعد ادعاءً ادعاءً وتحدد الخطأ الذي كان سيصل إلى قرار"
+            ],
+            "lo": [
+              "LO2",
+              "LO1"
+            ],
+            "minutes": 60,
+            "lab": {
+              "id": "1.1",
+              "title": "مهمتك بمساعد ومن دونه",
+              "summary": "تنجز مهمة غير سرية من عملك مرة دون مساعد ومرة معه، ثم تستخرج ادعاءات الناتج المساعَد وتصنف كلًّا منها مؤكدًا أو خاطئًا أو غير قابل للتحقق، وتحدد ما كان سيصل منها إلى قرار.",
+              "minutes": 35,
+              "href": "../labs/D1_1_own_task.html",
+              "steps": [
+                {
+                  "text": "تأكد من تصنيف مهمتك: عامة فقط",
+                  "minutes": 3
+                },
+                {
+                  "text": "أنجزها دون مساعد",
+                  "minutes": 9
+                },
+                {
+                  "text": "أنجزها مع المساعد",
+                  "minutes": 7
+                },
+                {
+                  "text": "استخرج ادعاءات الناتج المساعَد",
+                  "minutes": 5
+                },
+                {
+                  "text": "افحص كل ادعاء وعلّم ما كان سيصل إلى قرار",
+                  "minutes": 8
+                },
+                {
+                  "text": "قارن النسختين في الوقت والجودة والأخطاء",
+                  "minutes": 3
+                }
+              ],
+              "stretch": "اطلب من المساعد أن يفحص ادعاءاته بنفسه، وقارن ما وجده بما وجدته أنت"
+            }
+          },
+          {
+            "n": 2,
+            "label": "الجلسة 2",
+            "title": "الوكلاء وتفاوت القدرات",
+            "summary": "حلقة الوكيل في صورة واحدة، ولماذا لا يكون الإنجاز الجزئي عملًا منتهيًا، وكيف يبدو الإخفاق في سجل التشغيل",
+            "outcomes": [
+              "تشرح ما يضيفه الوكيل إلى المساعد: خطوات وأدوات وقرار بالتوقف",
+              "تقرأ سجل تشغيل وتسمّي نوع الإخفاق في كل خطوة",
+              "تفرّق بين إنجاز جزئي وعمل منتهٍ، وبين ادعاء النجاح والنجاح"
+            ],
+            "lo": [
+              "LO1"
+            ],
+            "minutes": 50,
+            "lab": {
+              "id": "1.2",
+              "title": "وكيل في بيئة معزولة: مهمتان من خمس خطوات",
+              "summary": "تراقب الوكيل «مُنجِز» في بيئة تشغيل معزولة وهو يحاول مهمتين متشابهتين من خمس خطوات، وتدوّن في كل خطوة ما نجح وما أخفق، ثم تقارن تقريره الختامي بالملفات.",
+              "minutes": 30,
+              "href": "../labs/D1_2_agent_sandbox.html",
+              "steps": [
+                {
+                  "text": "اقرأ موجزَي المهمتين والملفات",
+                  "minutes": 4
+                },
+                {
+                  "text": "شغّل المهمة الأولى ودوّن كل خطوة",
+                  "minutes": 8
+                },
+                {
+                  "text": "شغّل المهمة الثانية ودوّن كل خطوة",
+                  "minutes": 8
+                },
+                {
+                  "text": "طابق التقريرين الختاميين مع الملفات",
+                  "minutes": 6
+                },
+                {
+                  "text": "املأ ورقة الملاحظات لكل مهمة",
+                  "minutes": 4
+                }
+              ],
+              "stretch": "أعط الموجزين نفسيهما لوضع الوكيل في منتج تجاري مع الملفات الاصطناعية نفسها، وقارن السجلين"
+            }
+          },
+          {
+            "n": 3,
+            "label": "الجلسة 3",
+            "title": "قراءة الادعاءات وسؤال الفريق",
+            "summary": "مقامات نسب الاختبارات المرجعية والانتشار، والإنتاجية المُبلَّغ عنها مقابل المقيسة، والأدلة على حالاتك، والتكلفة لكل مهمة مكتملة، والبيانات والمالك ومن يوقف النظام",
+            "outcomes": [
+              "تسأل عن مقام كل نسبة: من كم، وعلى أي حالات، ومتى",
+              "تفرّق بين إنتاجية يبلّغ عنها المستخدمون وإنتاجية مقيسة، وتحسب التكلفة لكل مهمة مكتملة",
+              "تعدّ أسئلة عن المهمة والأدلة والبيانات والتكلفة والإشراف والمالك لأي مقترح"
+            ],
+            "lo": [
+              "LO3"
+            ],
+            "minutes": 70,
+            "lab": {
+              "id": "1.3",
+              "title": "عشرة ادعاءات، ثم أسئلتك للفريق",
+              "summary": "تقرأ مقترحًا من صفحة واحدة لوكيل يفرز طلبات شهادات المطابقة، وترتب ادعاءات الأداء العشرة فيه بحسب صلتها بالقرار، ثم تكتب ثمانية أسئلة أو أكثر للفريق وتقيسها بالمعايير المرجعية.",
+              "minutes": 25,
+              "href": "../labs/D1_3_claims_questions.html",
+              "steps": [
+                {
+                  "text": "اقرأ المقترح",
+                  "minutes": 3
+                },
+                {
+                  "text": "رتّب الادعاءات العشرة بحسب صلتها بالقرار",
+                  "minutes": 8
+                },
+                {
+                  "text": "اكتب ثمانية أسئلة أو أكثر للفريق",
+                  "minutes": 10
+                },
+                {
+                  "text": "قِس أسئلتك بالمعايير المرجعية",
+                  "minutes": 4
+                }
+              ],
+              "stretch": "احسب تكلفة الطلب المنجز من أرقام المقترح نفسه، وقارنها بتكلفة الطلب التي يعلنها"
+            }
+          }
+        ]
+      }
+    ],
+    "capstone": {
+      "summary": "",
+      "submission": "",
+      "talk_minutes": null,
+      "qa_minutes": null,
+      "rubric": []
+    },
+    "labs": {
+      "kind": "pages",
+      "base": "labs/"
+    },
+    "tools": [
+      {
+        "slot": "مساعد مستضاف",
+        "examples": [
+          "نموذج مستضاف مفتوح الأوزان",
+          "مساعد تجاري بخطته المجانية أو المعتمدة في جهتك"
+        ]
+      },
+      {
+        "slot": "وكيل في بيئة تشغيل معزولة",
+        "examples": [
+          "بيئة تشغيل معزولة للوكلاء توفرها الأكاديمية: صفحة المختبر 1.2، بوكيل مكتوب السلوك",
+          "وضع الوكيل في منتج تجاري"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "group": "تفاوت القدرات والوكلاء",
+        "items": [
+          {
+            "title": "Dell'Acqua وآخرون: Navigating the Jagged Technological Frontier (HBS Working Paper 24-013)",
+            "url": "https://www.hbs.edu/faculty/Pages/item.aspx?num=64700"
+          },
+          {
+            "title": "Xu وآخرون: TheAgentCompany, Benchmarking LLM Agents on Consequential Real World Tasks (arXiv 2412.14161)",
+            "url": "https://arxiv.org/abs/2412.14161"
+          },
+          {
+            "title": "Kwa وآخرون (METR): Measuring AI Ability to Complete Long Software Tasks (arXiv 2503.14499)",
+            "url": "https://arxiv.org/abs/2503.14499"
+          },
+          {
+            "title": "METR: Time Horizon 1.1 (يناير 2026)",
+            "url": "https://metr.org/blog/2026-01-29-time-horizon-1-1/"
+          },
+          {
+            "title": "METR: Task-Completion Time Horizons of Frontier AI Models (آخر تحديث سبتمبر 2026)",
+            "url": "https://metr.org/time-horizons/"
+          },
+          {
+            "title": "METR: Research Update, Algorithmic vs. Holistic Evaluation (أغسطس 2025)",
+            "url": "https://metr.org/blog/2025-08-12-research-update-towards-reconciling-slowdown-with-time-horizons/"
+          },
+          {
+            "title": "Anthropic: Building effective agents",
+            "url": "https://www.anthropic.com/engineering/building-effective-agents"
+          },
+          {
+            "title": "DeepSeek-AI: DeepSeek-R1, Incentivizing Reasoning Capability in LLMs via Reinforcement Learning (arXiv 2501.12948)",
+            "url": "https://arxiv.org/abs/2501.12948"
+          }
+        ]
+      },
+      {
+        "group": "قراءة الادعاءات",
+        "items": [
+          {
+            "title": "Becker وآخرون (METR): Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity (arXiv 2507.09089)",
+            "url": "https://arxiv.org/abs/2507.09089"
+          },
+          {
+            "title": "METR: Measuring the Self-Reported Impact of Early-2026 AI on Technical Worker Productivity (مايو 2026)",
+            "url": "https://metr.org/blog/2026-05-11-ai-usage-survey/"
+          },
+          {
+            "title": "Stanford HAI: AI Index Report 2025",
+            "url": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
+          },
+          {
+            "title": "U.S. Census Bureau: Tracking Firm Use of AI in Real Time, CES-WP-24-16",
+            "url": "https://www.census.gov/library/working-papers/2024/adrm/CES-WP-24-16.html"
+          },
+          {
+            "title": "Tow Center, Columbia Journalism Review: AI search engines and citing news (2025)",
+            "url": "https://www.cjr.org/tow_center/we-compared-eight-ai-search-engines-theyre-all-bad-at-citing-news.php"
+          }
+        ]
+      },
+      {
+        "group": "المرجعيات الوطنية",
+        "items": [
+          {
+            "title": "سدايا: مبادئ الذكاء الاصطناعي التوليدي للجهات الحكومية",
+            "url": "https://sdaia.gov.sa/ar/SDAIA/about/Files/GenAIGuidelinesForGovernmentARCompressed.pdf"
+          },
+          {
+            "title": "SDAIA: Generative AI Guidelines for Government",
+            "url": "https://sdaia.gov.sa/en/SDAIA/about/Files/GenAIGuidelinesForGovernmentENCompressed.pdf"
+          },
+          {
+            "title": "مكتب إدارة البيانات الوطنية: سياسة تصنيف البيانات",
+            "url": "https://sdaia.gov.sa/ar/SDAIA/about/Documents/DataClassificationPolicyAr.pdf"
+          },
+          {
+            "title": "NDMO: Data Classification Policy",
+            "url": "https://sdaia.gov.sa/en/SDAIA/about/Documents/DataClassificationPolicy.pdf"
+          }
+        ]
+      },
+      {
+        "group": "الملحق المؤرخ",
+        "items": [
+          {
+            "title": "OpenAI Help Center: ChatGPT agent (agent mode)",
+            "url": "https://help.openai.com/en/articles/11752874-chatgpt-agent"
+          }
+        ]
+      }
+    ]
+  }
+}

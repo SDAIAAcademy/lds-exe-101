@@ -1,0 +1,330 @@
+{
+  "v": 1,
+  "engine": "1.0.0",
+  "build": {
+    "at": "2026-11-17T22:01:46Z",
+    "version": "2027.1.0",
+    "commit": "87dae6b"
+  },
+  "lang": "ar",
+  "dir": "rtl",
+  "totals": {
+    "decks": 1,
+    "slides": 49,
+    "words": 3496,
+    "notes": 48,
+    "notes_ratio": 0.98,
+    "activities": 3,
+    "styles": 9,
+    "slide_minutes": null,
+    "components": {
+      "cards": 31,
+      "pills": 3,
+      "callouts": 25,
+      "tables": 8,
+      "code": 0,
+      "tokens": 0,
+      "flows": 2,
+      "stats": 9,
+      "bars": 3,
+      "meters": 0,
+      "agendas": 1,
+      "quizzes": 3,
+      "checklists": 3,
+      "prompts": 0,
+      "chats": 1,
+      "tools": 0,
+      "traces": 1,
+      "ladders": 1,
+      "figures": 0,
+      "matrices": 0,
+      "timers": 0,
+      "columns": 22,
+      "images": 0,
+      "drawings": 0,
+      "fragments": 0
+    },
+    "minutes": 180
+  },
+  "decks": [
+    {
+      "deck": "day1",
+      "kind": "day",
+      "label": "اليوم 1",
+      "title": "جرّب بيدك، وراقب الوكيل، ثم اسأل",
+      "slides": 49,
+      "words": 3496,
+      "notes": 48,
+      "notes_ratio": 0.98,
+      "activities": 3,
+      "styles": 9,
+      "slide_minutes": null,
+      "components": {
+        "cards": 31,
+        "pills": 3,
+        "callouts": 25,
+        "tables": 8,
+        "code": 0,
+        "tokens": 0,
+        "flows": 2,
+        "stats": 9,
+        "bars": 3,
+        "meters": 0,
+        "agendas": 1,
+        "quizzes": 3,
+        "checklists": 3,
+        "prompts": 0,
+        "chats": 1,
+        "tools": 0,
+        "traces": 1,
+        "ladders": 1,
+        "figures": 0,
+        "matrices": 0,
+        "timers": 0,
+        "columns": 22,
+        "images": 0,
+        "drawings": 0,
+        "fragments": 0
+      },
+      "minutes": 180,
+      "sessions": [
+        {
+          "n": 1,
+          "label": "الجلسة 1",
+          "title": "ما يفعله المساعد بمهمتك",
+          "slides": 13,
+          "words": 984,
+          "notes": 13,
+          "notes_ratio": 1,
+          "activities": 1,
+          "styles": 3,
+          "slide_minutes": null,
+          "components": {
+            "cards": 7,
+            "pills": 0,
+            "callouts": 9,
+            "tables": 2,
+            "code": 0,
+            "tokens": 0,
+            "flows": 1,
+            "stats": 5,
+            "bars": 1,
+            "meters": 0,
+            "agendas": 0,
+            "quizzes": 1,
+            "checklists": 1,
+            "prompts": 0,
+            "chats": 1,
+            "tools": 0,
+            "traces": 0,
+            "ladders": 0,
+            "figures": 0,
+            "matrices": 0,
+            "timers": 0,
+            "columns": 7,
+            "images": 0,
+            "drawings": 0,
+            "fragments": 0
+          },
+          "minutes": 60,
+          "lab_minutes": 35
+        },
+        {
+          "n": 2,
+          "label": "الجلسة 2",
+          "title": "الوكلاء وتفاوت القدرات",
+          "slides": 11,
+          "words": 769,
+          "notes": 11,
+          "notes_ratio": 1,
+          "activities": 1,
+          "styles": 2,
+          "slide_minutes": null,
+          "components": {
+            "cards": 2,
+            "pills": 0,
+            "callouts": 6,
+            "tables": 2,
+            "code": 0,
+            "tokens": 0,
+            "flows": 1,
+            "stats": 2,
+            "bars": 1,
+            "meters": 0,
+            "agendas": 0,
+            "quizzes": 1,
+            "checklists": 1,
+            "prompts": 0,
+            "chats": 0,
+            "tools": 0,
+            "traces": 1,
+            "ladders": 0,
+            "figures": 0,
+            "matrices": 0,
+            "timers": 0,
+            "columns": 4,
+            "images": 0,
+            "drawings": 0,
+            "fragments": 0
+          },
+          "minutes": 50,
+          "lab_minutes": 30
+        },
+        {
+          "n": 3,
+          "label": "الجلسة 3",
+          "title": "قراءة الادعاءات وسؤال الفريق",
+          "slides": 19,
+          "words": 1309,
+          "notes": 18,
+          "notes_ratio": 0.95,
+          "activities": 1,
+          "styles": 4,
+          "slide_minutes": null,
+          "components": {
+            "cards": 17,
+            "pills": 0,
+            "callouts": 8,
+            "tables": 3,
+            "code": 0,
+            "tokens": 0,
+            "flows": 0,
+            "stats": 2,
+            "bars": 1,
+            "meters": 0,
+            "agendas": 0,
+            "quizzes": 1,
+            "checklists": 1,
+            "prompts": 0,
+            "chats": 0,
+            "tools": 0,
+            "traces": 0,
+            "ladders": 1,
+            "figures": 0,
+            "matrices": 0,
+            "timers": 0,
+            "columns": 8,
+            "images": 0,
+            "drawings": 0,
+            "fragments": 0
+          },
+          "minutes": 70,
+          "lab_minutes": 25
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "id": "LO1",
+      "text": "يصف مواضع نجاح المساعدات الذكية والوكلاء وإخفاقها في مهام متشابهة، استنادًا إلى مهام التطبيق العملي",
+      "level": "Awareness",
+      "slides": [
+        "day1#case-rujhan",
+        "day1#three-kinds",
+        "day1#what-each-is-for",
+        "day1#jagged-frontier",
+        "day1#agent-loop",
+        "day1#partial-not-finished",
+        "day1#uneven-by-task",
+        "day1#longer-tasks",
+        "day1#failure-types",
+        "day1#trace-room-booking",
+        "day1#three-questions-per-step",
+        "day1#check-partial",
+        "day1#debrief-1-2",
+        "day1#how-assessed"
+      ],
+      "activities": [
+        "day1#check-partial-q1"
+      ],
+      "sessions": [
+        "day1/1",
+        "day1/2"
+      ],
+      "labs": [
+        "1.1",
+        "1.2"
+      ],
+      "questions": [
+        "q-agents-01",
+        "q-agents-02",
+        "q-agents-03",
+        "q-agents-04",
+        "q-agents-05"
+      ],
+      "covered": true
+    },
+    {
+      "id": "LO2",
+      "text": "يقارن بين نتائج مهمة واحدة أُنجزت بمساعدة ومن دونها، ويتحقق من الحقائق والأرقام والمصادر، استنادًا إلى عمل غير سري من عمله",
+      "level": "Applied",
+      "slides": [
+        "day1#ai-policy-today",
+        "day1#classify-before-input",
+        "day1#a-claim-is",
+        "day1#three-verdicts",
+        "day1#sources-are-claims",
+        "day1#reaches-decision",
+        "day1#disclose-the-assistant",
+        "day1#check-unverifiable",
+        "day1#debrief-1-1",
+        "day1#how-assessed"
+      ],
+      "activities": [
+        "day1#check-unverifiable-q1"
+      ],
+      "sessions": [
+        "day1/1"
+      ],
+      "labs": [
+        "1.1"
+      ],
+      "questions": [
+        "q-verify-01",
+        "q-verify-02",
+        "q-verify-03",
+        "q-verify-04",
+        "q-verify-05"
+      ],
+      "covered": true
+    },
+    {
+      "id": "LO3",
+      "text": "يعدّ أسئلة عن المهمة والأدلة والبيانات والتكلفة والإشراف والمالك لمقترح ذكاء اصطناعي، استنادًا إلى مقترح افتراضي من صفحة واحدة",
+      "level": "Applied",
+      "slides": [
+        "day1#adoption-denominators",
+        "day1#benchmark-denominators",
+        "day1#self-reported-vs-measured",
+        "day1#evidence-ladder",
+        "day1#cost-per-completed-task",
+        "day1#which-data-which-tool",
+        "day1#owner-and-stop",
+        "day1#someone-can-challenge",
+        "day1#six-areas",
+        "day1#parallel-hr-claims",
+        "day1#check-decision-relevant",
+        "day1#debrief-1-3",
+        "day1#how-assessed"
+      ],
+      "activities": [
+        "day1#check-decision-relevant-q1"
+      ],
+      "sessions": [
+        "day1/3"
+      ],
+      "labs": [
+        "1.3"
+      ],
+      "questions": [
+        "q-claims-01",
+        "q-claims-02",
+        "q-claims-03",
+        "q-claims-04",
+        "q-claims-05"
+      ],
+      "covered": true
+    }
+  ]
+}
