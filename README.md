@@ -32,7 +32,7 @@ AI for Executives: A Hands-On Briefing
 
 ## دراسة الحالة
 
-**هيئة قِسطاس للمواصفات والجودة.** هيئة وطنية افتراضية تصدر شهادات المطابقة للمنتجات، تراكم لديها رصيد الطلبات المفتوحة، ويقترح فريقها الرقمي وكيلًا اسمه «مُنجِز» يفرز الطلبات ويصدر الشهادة آليًّا. يعمل المشاركون مع منيرة الفيفي، نائبة المحافظ لخدمات المطابقة، وغادة الصقر، مديرة الاستراتيجية والأداء، وناصر الفواز، رئيس فريق الخدمات الرقمية.
+**هيئة رُجحان لشهادات المطابقة.** هيئة وطنية افتراضية تصدر شهادات المطابقة للمنتجات، تراكم لديها رصيد الطلبات المفتوحة، ويقترح فريقها الرقمي وكيلًا اسمه «مُنجِز» يفرز الطلبات ويصدر الشهادة آليًّا. يعمل المشاركون مع منيرة الفيفي، نائبة المحافظ لخدمات المطابقة، وغادة الصقر، مديرة الاستراتيجية والأداء، وناصر الفواز، رئيس فريق الخدمات الرقمية.
 
 كل ملفات الحالة اصطناعية ومولّدة ببذرة ثابتة: بيانات طلبات ربعية وشهرية، ومستهدفات خدمة تغيّرت خلال العام، ومسودة إحاطة زُرعت فيها ادعاءات خاطئة وأخرى لا يمكن التحقق منها، وبيئة تشغيل معزولة فيها وكيل مكتوب السلوك (ليس نموذجًا لغويًّا) ومهمتان متشابهتان من خمس خطوات، ومقترح من صفحة واحدة فيه عشرة ادعاءات أداء. لكل ذلك مفتاح إجابة للمدرّب في `labs/solutions/`.
 
@@ -89,12 +89,16 @@ AI for Executives: A Hands-On Briefing
 - [Dell'Acqua وآخرون: Navigating the Jagged Technological Frontier (HBS Working Paper 24-013)](https://www.hbs.edu/faculty/Pages/item.aspx?num=64700)
 - [Xu وآخرون: TheAgentCompany, Benchmarking LLM Agents on Consequential Real World Tasks (arXiv 2412.14161)](https://arxiv.org/abs/2412.14161)
 - [Kwa وآخرون (METR): Measuring AI Ability to Complete Long Software Tasks (arXiv 2503.14499)](https://arxiv.org/abs/2503.14499)
+- [METR: Time Horizon 1.1 (يناير 2026)](https://metr.org/blog/2026-01-29-time-horizon-1-1/)
+- [METR: Task-Completion Time Horizons of Frontier AI Models (آخر تحديث سبتمبر 2026)](https://metr.org/time-horizons/)
+- [METR: Research Update, Algorithmic vs. Holistic Evaluation (أغسطس 2025)](https://metr.org/blog/2025-08-12-research-update-towards-reconciling-slowdown-with-time-horizons/)
 - [Anthropic: Building effective agents](https://www.anthropic.com/engineering/building-effective-agents)
 - [DeepSeek-AI: DeepSeek-R1, Incentivizing Reasoning Capability in LLMs via Reinforcement Learning (arXiv 2501.12948)](https://arxiv.org/abs/2501.12948)
 
 ### قراءة الادعاءات
 
 - [Becker وآخرون (METR): Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity (arXiv 2507.09089)](https://arxiv.org/abs/2507.09089)
+- [METR: Measuring the Self-Reported Impact of Early-2026 AI on Technical Worker Productivity (مايو 2026)](https://metr.org/blog/2026-05-11-ai-usage-survey/)
 - [Stanford HAI: AI Index Report 2025](https://hai.stanford.edu/ai-index/2025-ai-index-report)
 - [U.S. Census Bureau: Tracking Firm Use of AI in Real Time, CES-WP-24-16](https://www.census.gov/library/working-papers/2024/adrm/CES-WP-24-16.html)
 - [Tow Center, Columbia Journalism Review: AI search engines and citing news (2025)](https://www.cjr.org/tow_center/we-compared-eight-ai-search-engines-theyre-all-bad-at-citing-news.php)

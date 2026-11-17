@@ -2,7 +2,7 @@
 # requires-python = ">=3.11"
 # dependencies = []
 # ///
-"""Write the synthetic file pack of LDS-EXE-101 (Qistas Standards and Quality Authority).
+"""Write the synthetic file pack of LDS-EXE-101 (Rujhan Conformity Certification Authority).
 
 Run from the repository root:  uv run labs/_tools/prepare_files.py
 
@@ -90,7 +90,7 @@ def write_lab11(q: dict) -> dict:
     write(FILES / "q3_certificates.csv",
           csv_text(["month", "region", "received", "closed", "median_days_to_close"], rows))
     sept = {r[1]: r for r in rows if r[0] == "2026-09"}
-    write(FILES / "service_targets.md", f"""# هيئة قِسطاس: مستهدفات خدمة شهادات المطابقة
+    write(FILES / "service_targets.md", f"""# هيئة رُجحان: مستهدفات خدمة شهادات المطابقة
 
 مستند داخلي اصطناعي لأغراض التدريب. التصنيف: عام.
 
@@ -267,7 +267,7 @@ def sandbox_world(rng: random.Random) -> dict:
             "## تعديل\n\n"
             "ابتداءً من 1 نوفمبر 2026: الوسيط المستهدف في المنطقة الشرقية 10 أيام (برنامج تجريبي لستة أشهر).\n"),
         "monthly_summary.csv": csv_text(["month", "region", "received", "closed", "open_at_month_end", "median_days"], summary),
-        "README.txt": ("ملفات اصطناعية لهيئة قسطاس، مصنفة «عام».\n"
+        "README.txt": ("ملفات اصطناعية لهيئة رُجحان، مصنفة «عام».\n"
                        "طلبات نوفمبر في ملفين لأن نظام التصدير يقسم الملف عند 118 صفًا.\n"
                        "monthly_summary.csv يعدّه قسم الإحصاء من النظام نفسه، وهو المرجع للتحقق.\n"),
     }
@@ -312,7 +312,7 @@ CLAIMS13 = [
     ("K6", "يُنجز الوكيل 62% من الطلبات دون تدخل بشري", "عالية",
      "يحدد كم يبقى للمراجعين وكم توفّر فعلًا"),
     ("K7", "حلّ النموذج الأساسي أولًا في لوحة صدارة عامة", "منخفضة",
-     "معيار عام لا يشبه مهمتنا، ويتغير كل شهر"),
+     "اختبار مرجعي عام لا يشبه مهمتنا، ويتغير كل شهر"),
     ("K8", "يدعم أكثر من 50 لغة", "منخفضة",
      "الطلبات بالعربية والإنجليزية؛ لا صلة بالقرار"),
     ("K9", "مرّر الوكيل 9 من 40 طلبًا كان المراجعون قد رفضوها", "عالية",
