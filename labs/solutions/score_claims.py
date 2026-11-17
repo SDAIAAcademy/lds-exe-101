@@ -7,7 +7,9 @@
   uv run labs/solutions/score_claims.py <claim_sheet.csv>
 
 A row counts when its verdict matches; the decision mark is scored on its own. Rows are matched
-by their number n (C1 or 1).
+by their number n (C1 or 1): the lab page asks participants on the fallback task to number the
+claims in the order they appear in the draft, which is the order of the reference. A sheet numbered
+another way is scored wrongly: renumber it first. Own-task sheets have no key and are not scored.
 """
 import csv
 import sys
