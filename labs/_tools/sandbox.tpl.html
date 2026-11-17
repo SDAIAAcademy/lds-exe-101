@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>صندوق قسطاس: بيئة تشغيل معزولة للوكيل مُنجِز</title>
+<style>
+  :root { --ink: #1b2540; --paper: #f6f4ee; --line: #d9d5c8; --teal: #0f766e; --coral: #b42318; --navy: #1b2540; }
+  * { box-sizing: border-box; }
+  body { font-family: "IBM Plex Sans Arabic", system-ui, sans-serif; margin: 0; background: var(--paper); color: var(--ink); line-height: 1.75; font-size: 16px; }
+  header { background: var(--navy); color: #fff; padding: 14px 16px; }
+  header h1 { font-size: 21px; margin: 0; }
+  header p { margin: 2px 0 0; font-size: 14px; }
+  main { max-width: 980px; margin: 0 auto; padding: 12px 16px 60px; }
+  nav.tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0; }
+  button { font: inherit; font-weight: 600; padding: 7px 14px; border: 1px solid var(--teal); border-radius: 8px; background: var(--teal); color: #fff; cursor: pointer; }
+  button.alt, nav.tabs button { background: #fff; color: var(--ink); border-color: #b9b4a4; }
+  nav.tabs button[aria-selected="true"] { background: var(--teal); color: #fff; border-color: var(--teal); }
+  button:disabled { opacity: .45; cursor: default; }
+  section.panel { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px; margin: 10px 0; }
+  h2 { font-size: 19px; margin: 4px 0 8px; }
+  h3 { font-size: 16px; margin: 12px 0 4px; }
+  .scroll { overflow-x: auto; max-height: 420px; overflow-y: auto; }
+  table { border-collapse: collapse; width: 100%; font-size: 14px; }
+  th, td { border: 1px solid var(--line); padding: 4px 8px; text-align: start; }
+  th { background: #efece2; position: sticky; top: 0; }
+  .ltr { direction: ltr; unicode-bidi: isolate; display: inline-block; }
+  pre { white-space: pre-wrap; overflow-wrap: anywhere; background: #f3f1ea; border-radius: 8px; padding: 8px 10px; margin: 6px 0; font-size: 14px; }
+  .ev { border-inline-start: 4px solid var(--line); padding: 6px 12px; margin: 8px 0; background: #fbfaf6; border-radius: 6px; }
+  .ev.think { border-color: #6b5bd2; } .ev.call { border-color: var(--teal); } .ev.result { border-color: #7a8699; } .ev.final { border-color: var(--coral); }
+  .ev b { display: block; font-size: 13px; color: #4b5563; }
+  .row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 8px 0; }
+  .note { background: #eef6f5; border: 1px solid #b7d9d5; border-radius: 10px; padding: 8px 12px; font-size: 14.5px; margin: 8px 0; }
+  ul.files { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<header>
+  <h1>صندوق قسطاس: بيئة تشغيل معزولة للوكيل «مُنجِز»</h1>
+  <p>المختبر 1.2 من مقرر الذكاء الاصطناعي للتنفيذيين. كل الملفات اصطناعية، ولا شيء يغادر هذه الصفحة.</p>
+</header>
+<main>
+  <div class="note"><b>مُنجِز ليس نموذجًا لغويًّا.</b> هو برنامج مكتوب السلوك يقلّد طريقة عمل الوكلاء: يقرأ الموجز، ويستدعي أدوات، ويقرر متى ينتهي. سلوكه ثابت، فتشاهد القاعة كلها التشغيل نفسه وتقارن ملاحظاتها. قواعده في صفحة المختبر بعد أن تنتهي.</div>
+  <nav class="tabs" role="tablist">
+    <button role="tab" aria-selected="true" data-tab="brief">الموجزان</button>
+    <button role="tab" aria-selected="false" data-tab="files">الملفات</button>
+    <button role="tab" aria-selected="false" data-tab="run">التشغيل</button>
+    <button role="tab" aria-selected="false" data-tab="outbox">المسودات</button>
+  </nav>
+
+  <section class="panel" id="tab-brief">
+    <h2>المهمة A</h2>
+    <pre id="brief-A"></pre>
+    <h2>المهمة B</h2>
+    <pre id="brief-B"></pre>
+  </section>
+
+  <section class="panel" id="tab-files" hidden>
+    <h2>ملفات الصندوق</h2>
+    <ul class="files" id="file-list"></ul>
+    <h3 id="file-name"></h3>
+    <div class="scroll" id="file-view"></div>
+  </section>
+
+  <section class="panel" id="tab-run" hidden>
+    <h2>شغّل مهمة خطوة خطوة</h2>
+    <div class="row">
+      <label for="job">المهمة</label>
+      <select id="job"><option value="A">المهمة A: الوسطى، أكتوبر</option><option value="B">المهمة B: الشرقية، نوفمبر</option></select>
+      <button id="start">ابدأ من جديد</button>
+      <button id="next" class="alt" disabled>الخطوة التالية</button>
+    </div>
+    <div id="trace"></div>
+  </section>
+
+  <section class="panel" id="tab-outbox" hidden>
+    <h2>ما كتبه الوكيل في مجلد المسودات</h2>
+    <p>لا يرسل الوكيل شيئًا: يحفظ مسودة فقط.</p>
+    <div id="outbox"><p>لا شيء بعد.</p></div>
+  </section>
+</main>
+
+<script id="data">
+var DATA = /*__DATA__*/null;
+</script>
+
+<script id="engine">
+/* The scripted agent. Pure functions: the page and labs/solutions/check_sandbox.mjs run the same code. */
+var ENGINE = (function () {
+  var JOBS = {
+    A: { region: 'الوسطى', month: '2026-10', monthName: 'أكتوبر 2026' },
+    B: { region: 'الشرقية', month: '2026-11', monthName: 'نوفمبر 2026' }
+  };
+  function brief(id) {
+    var j = JOBS[id];
+    return 'أعدّ مذكرة عن طلبات شهادات المطابقة في المنطقة ' + j.region + '، ' + j.monthName + '.\n' +
+      '1. افتح بيانات طلبات الشهر.\n' +
+      '2. اختر طلبات المنطقة ' + j.region + ' وحدها.\n' +
+      '3. احسب عدد الطلبات، وما بقي منها مفتوحًا في نهاية الشهر، ووسيط أيام الإغلاق.\n' +
+      '4. قارن الوسيط بالمستهدف المعمول به في ذلك الشهر لتلك المنطقة.\n' +
+      '5. اكتب مذكرة من خمسة أسطر لنائبة المحافظ واحفظها مسودة. لا ترسل شيئًا.';
+  }
+  function parseCSV(text) {
+    var lines = text.trim().split('\n');
+    var head = lines[0].split(',');
+    return lines.slice(1).map(function (l) {
+      var cells = l.split(','); var o = {};
+      head.forEach(function (h, i) { o[h] = cells[i] || ''; });
+      return o;
+    });
+  }
+  function days(a, b) { return Math.round((Date.parse(b) - Date.parse(a)) / 86400000); }
+  function median(xs) {
+    var s = xs.slice().sort(function (a, b) { return a - b; }); var n = s.length;
+    if (!n) return null;
+    return n % 2 ? s[(n - 1) / 2] : (s[n / 2 - 1] + s[n / 2]) / 2;
+  }
+  function run(id, data) {
+    var j = JOBS[id]; var steps = []; var names = Object.keys(data.files).sort();
+    // 1. open the month's data: the agent takes the first file whose name matches
+    var matches = names.filter(function (n) { return n.indexOf('apps_' + j.month) === 0; });
+    var opened = matches[0]; var rows = parseCSV(data.files[opened]);
+    steps.push({ n: 1, think: 'أحتاج بيانات طلبات ' + j.monthName + '. أبحث عن ملف يبدأ اسمه بـ apps_' + j.month + '.',
+      call: 'list_files()  ثم  read_file("' + opened + '")',
+      result: 'الملفات المطابقة: ' + matches.join('، ') + '\nقرأت ' + opened + ': ' + rows.length + ' صفًا.' });
+    // 2. filter the region
+    var mine = rows.filter(function (r) { return r.region === j.region; });
+    steps.push({ n: 2, think: 'أختار صفوف المنطقة ' + j.region + '.',
+      call: 'filter(region == "' + j.region + '")', result: mine.length + ' طلبًا في المنطقة ' + j.region + '.' });
+    // 3. counts and median
+    var closed = mine.filter(function (r) { return r.closed; });
+    var med = median(closed.map(function (r) { return days(r.received, r.closed); }));
+    var stats = { received: mine.length, closed: closed.length, open: mine.length - closed.length, median_days: med };
+    steps.push({ n: 3, think: 'أحسب العدد والمفتوح والوسيط.',
+      call: 'count(), count(closed == ""), median(closed - received)',
+      result: 'العدد ' + stats.received + '، المفتوح في نهاية الشهر ' + stats.open + '، وسيط أيام الإغلاق ' + med + '.' });
+    // 4. the target: the agent reads the first figure after the word for median
+    var t = data.files['service_targets.md'];
+    var m = t.match(/الوسيط[^0-9]*([0-9]+)/); var target = Number(m[1]);
+    steps.push({ n: 4, think: 'أقرأ المستهدف من ملف المستهدفات.',
+      call: 'read_file("service_targets.md")', result: 'المستهدف: ' + target + ' يومًا.' });
+    // 5. the memo, and the closing message
+    var met = med <= target;
+    var lines = [
+      'إلى: نائبة المحافظ لخدمات المطابقة',
+      'وردت ' + stats.received + ' طلبًا من المنطقة ' + j.region + ' في ' + j.monthName + '، وبقي ' + stats.open + ' منها مفتوحًا في نهاية الشهر.',
+      'وسيط أيام الإغلاق ' + med + ' يومًا، والمستهدف ' + target + ' يومًا، ' + (met ? 'فقد تحقق المستهدف.' : 'فلم يتحقق المستهدف.'),
+      id === 'A' ? 'وهو أسرع أداء بين المناطق هذا الشهر.' : 'تحققتُ من جميع بيانات الشهر قبل كتابة المذكرة.',
+      'التوصية: الاستمرار على الوتيرة الحالية مع متابعة شهرية.'
+    ];
+    var memo = lines.join('\n');
+    steps.push({ n: 5, think: 'أكتب المذكرة وأحفظها مسودة.',
+      call: 'save_draft("memo_' + id + '.txt")', result: 'حُفظت المسودة memo_' + id + '.txt.' });
+    var final = 'أنجزت المهمة بنجاح: خمس خطوات من خمس، والمذكرة في مجلد المسودات.';
+    return { id: id, opened: opened, matches: matches, stats: stats, target: target, met: met, memo: memo, final: final, steps: steps };
+  }
+  return { JOBS: JOBS, brief: brief, run: run, parseCSV: parseCSV };
+})();
+if (typeof module !== 'undefined') module.exports = ENGINE;
+</script>
+
+<script>
+(function () {
+  if (!DATA) return;
+  var $ = function (id) { return document.getElementById(id); };
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+  $('brief-A').textContent = ENGINE.brief('A');
+  $('brief-B').textContent = ENGINE.brief('B');
+  document.querySelectorAll('nav.tabs button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      document.querySelectorAll('nav.tabs button').forEach(function (x) { x.setAttribute('aria-selected', x === b ? 'true' : 'false'); });
+      ['brief', 'files', 'run', 'outbox'].forEach(function (t) { $('tab-' + t).hidden = t !== b.dataset.tab; });
+    });
+  });
+  function showFile(name) {
+    $('file-name').textContent = name; var v = $('file-view'); v.textContent = '';
+    var text = DATA.files[name];
+    if (/\.csv$/.test(name)) {
+      var rows = ENGINE.parseCSV(text); var head = Object.keys(rows[0] || {});
+      v.appendChild(el('p', null, rows.length + ' صفًا.'));
+      var tb = el('table'); var tr = el('tr'); head.forEach(function (h) { tr.appendChild(el('th', null, h)); }); tb.appendChild(tr);
+      rows.forEach(function (r) { var t = el('tr'); head.forEach(function (h) { t.appendChild(el('td', null, r[h])); }); tb.appendChild(t); });
+      v.appendChild(tb);
+    } else { v.appendChild(el('pre', null, text)); }
+  }
+  Object.keys(DATA.files).sort().forEach(function (n) {
+    var li = el('li'); var b = el('button', 'alt'); b.appendChild(el('span', 'ltr', n));
+    b.addEventListener('click', function () { showFile(n); }); li.appendChild(b); $('file-list').appendChild(li);
+  });
+  var current = null; var shown = 0;
+  function render() {
+    var t = $('trace'); t.textContent = '';
+    current.steps.slice(0, shown).forEach(function (s) {
+      t.appendChild(el('h3', null, 'الخطوة ' + s.n));
+      var a = el('div', 'ev think'); a.appendChild(el('b', null, 'الوكيل يفكر')); a.appendChild(el('span', null, s.think)); t.appendChild(a);
+      var c = el('div', 'ev call'); c.appendChild(el('b', null, 'طلب أداة')); c.appendChild(el('span', 'ltr', s.call)); t.appendChild(c);
+      var r = el('div', 'ev result'); r.appendChild(el('b', null, 'النتيجة')); r.appendChild(el('pre', null, s.result)); t.appendChild(r);
+    });
+    if (shown === current.steps.length) {
+      var f = el('div', 'ev final'); f.appendChild(el('b', null, 'الرسالة الختامية')); f.appendChild(el('span', null, current.final)); t.appendChild(f);
+      var o = $('outbox'); var h = el('h3', null, 'memo_' + current.id + '.txt');
+      var first = o.querySelector('p'); if (first && !o.querySelector('h3')) o.textContent = '';
+      var old = document.getElementById('memo-' + current.id); if (old) old.remove();
+      var box = el('div'); box.id = 'memo-' + current.id; box.appendChild(h); box.appendChild(el('pre', null, current.memo)); o.appendChild(box);
+    }
+    $('next').disabled = shown >= current.steps.length;
+  }
+  $('start').addEventListener('click', function () { current = ENGINE.run($('job').value, DATA); shown = 0; render(); $('next').disabled = false; });
+  $('next').addEventListener('click', function () { if (current && shown < current.steps.length) { shown += 1; render(); } });
+})();
+</script>
+</body>
+</html>

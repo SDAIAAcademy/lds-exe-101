@@ -288,6 +288,15 @@
           "url": "https://sdaia.gov.sa/en/SDAIA/about/Documents/DataClassificationPolicy.pdf"
         }
       ]
+    },
+    {
+      "group": "الملحق المؤرخ",
+      "items": [
+        {
+          "title": "OpenAI Help Center: ChatGPT agent (agent mode)",
+          "url": "https://help.openai.com/en/articles/11752874-chatgpt-agent"
+        }
+      ]
     }
   ]
 }
